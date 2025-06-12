@@ -1,7 +1,6 @@
-import 'package:test_task/core/utils/formatters.dart';
-import 'package:test_task/domain/entities/file_info.dart';
-import 'package:test_task/domain/repository/upload_file_repository.dart';
-
+import '/core/utils/formatters.dart';
+import '/domain/entities/file_info.dart';
+import '/domain/repository/upload_file_repository.dart';
 import '../local/pick_file_from_local.dart';
 
 class UploadFileRepositoryImpl extends UploadFileRepository {
@@ -14,7 +13,11 @@ class UploadFileRepositoryImpl extends UploadFileRepository {
     try {
       final file = await _fileFromLocal.pickFile();
       if (file != null) {
-        if (file.size > maxInBytes) throw Exception('File size exceeds 10 MB limit. Selected file is ${Formatters.formatBytes(file.size)}.');
+        if (file.size > maxInBytes) {
+          throw Exception(
+            'File size exceeds 10 MB limit. Selected file is ${Formatters.formatBytes(file.size)}.',
+          );
+        }
 
         return FileInfo(
           name: file.name,

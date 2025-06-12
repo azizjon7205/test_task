@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'app.dart';
 import 'core/utils/injections.dart';
+import 'ui/file_upload_page.dart';
 
 void main() {
-
   configureDependencies();
 
   runApp(const MyApp());
@@ -26,4 +25,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

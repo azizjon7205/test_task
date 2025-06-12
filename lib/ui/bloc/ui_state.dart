@@ -1,4 +1,4 @@
-import 'package:test_task/domain/entities/file_info.dart';
+import '/domain/entities/file_info.dart';
 
 class UiState {
   bool isLoading;

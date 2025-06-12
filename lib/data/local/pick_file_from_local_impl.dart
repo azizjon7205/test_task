@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:file_picker/file_picker.dart';
 
 import 'pick_file_from_local.dart';
@@ -15,7 +13,6 @@ class PickFileFromLocalImpl extends PickFileFromLocal {
       if (result == null || result.files.isEmpty == true) return null;
 
       return result.files.single;
-
     } catch (e) {
       throw Exception('Error selecting file: $e');
     }

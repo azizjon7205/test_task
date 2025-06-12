@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:test_task/core/utils/injections.dart';
-import 'package:test_task/ui/bloc/ui_bloc.dart';
-import 'package:test_task/ui/widgets/card_upload_file.dart';
+
+import '/core/utils/injections.dart';
+import '/ui/bloc/ui_bloc.dart';
+import '/ui/widgets/card_upload_file.dart';
 
 class FileUploadPage extends StatelessWidget {
   const FileUploadPage({super.key});
